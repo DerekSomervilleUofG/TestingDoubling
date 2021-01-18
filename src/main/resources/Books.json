@@ -1,0 +1,19 @@
+{
+  "Author": "Leo Tolstoy",
+  "Books": [
+    "War and Peace",
+    "Anna Karenina",
+    "The Cossacks",
+    "The Death of Ivan Ilyich"
+  ],
+  "Author": "Andrew Marr",
+  "Books": [
+    "Elizabethians"
+  ],
+  "Author": "Barack Obama",
+  "Books": [
+    "A Promised Land",
+    "Dreams From My Father",
+    "The Audacity of Hope"
+  ]
+}
