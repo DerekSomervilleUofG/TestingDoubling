@@ -11,13 +11,13 @@ class EncryptionTest {
     Encryption encryption = new Encryption();
 
     @Test
-    void encryptMessage() {
+    void encryptMessageProtected() {
         String message = "Hello world";
         assertEquals("Igopt&~w{mf",encryption.encryptMessage(message,"123.456.789",true));
     }
 
     @Test
-    void unEncryptMessage() {
+    void unEncryptMessageProtected() {
         String message = "Hello world";
         assertEquals(message,encryption.encryptMessage("Igopt&~w{mf","123.456.789",false));
     }
@@ -42,19 +42,19 @@ class EncryptionTest {
     }
 
     @Test
-    void testEncryptUnEncryptMessage() {
+    void testEncryptUnEncryptMessagePublic() {
         String message = "Hello world";
         assertEquals(message,encryption.unEncryptMessage(encryption.encryptMessage(message)));
     }
 
     @Test
-    void testEncryptMessage() {
+    void testEncryptMessagePublic() {
         String message = "Hello world";
         assertEquals("Innmu(xpure",encryption.encryptMessage(message));
     }
 
     @Test
-    void testUnEncryptMessage() {
+    void testUnEncryptMessagePublic() {
         String message = "Hello world";
         assertEquals(message,encryption.unEncryptMessage("Innmu(xpure"));
     }
