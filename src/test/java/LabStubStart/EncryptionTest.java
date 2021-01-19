@@ -1,5 +1,6 @@
 package LabStubStart;
 
+import LabStubComplete.InternetProtocol;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -8,7 +9,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class EncryptionTest {
-    Encryption encryption = new Encryption();
+    Encryption encryption = new Encryption(new InternetProtocol());
 
     @Test
     void encryptMessageProtected() {

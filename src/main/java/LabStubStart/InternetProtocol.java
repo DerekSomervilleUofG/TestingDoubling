@@ -4,10 +4,10 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 public class InternetProtocol {
-    public InetAddress getIP(){
-        InetAddress ip = null;
+    public String getIP(){
+        String ip = null;
         try {
-            ip = InetAddress.getLocalHost();
+            ip = InetAddress.getLocalHost().getHostAddress();
         } catch (UnknownHostException ex) {
             ex.printStackTrace();
         }

@@ -1,24 +1,26 @@
 package LabStubStart;
 
+import LabStubComplete.IPInterface;
+
 import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Encryption {
 
-    private InternetProtocol internetProtocol = new InternetProtocol();
+    private IPInterface internetProtocol;
 
-    public void setInternetProtocol(InternetProtocol internetProtocol){
+    Encryption(IPInterface internetProtocol){
         this.internetProtocol = internetProtocol;
     }
 
     public String encryptMessage(String message){
-        String encryptedMessage = encryptMessage(message,internetProtocol.getIP().getHostAddress(),true);
+        String encryptedMessage = encryptMessage(message,internetProtocol.getIP(),true);
         return encryptedMessage;
     }
 
     public String unEncryptMessage(String message){
-        String encryptedMessage = encryptMessage(message,internetProtocol.getIP().getHostAddress(),false);
+        String encryptedMessage = encryptMessage(message,internetProtocol.getIP(),false);
         return encryptedMessage;
     }
 

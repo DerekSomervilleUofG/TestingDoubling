@@ -10,6 +10,6 @@ class InternetProtocolTest {
 
     @Test
     void getIP() {
-        assertEquals(internetProtocol.getIP().getHostAddress(),"192.168.1.136");
+        assertEquals(internetProtocol.getIP(),"192.168.1.136");
     }
 }
