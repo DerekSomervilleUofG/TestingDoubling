@@ -1,4 +1,5 @@
-package ExampleStub;
+package ExamplePrior;
+
 
 import java.io.File;
 import java.io.IOException;
@@ -6,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class LoadDataFile implements LoadData{
+public class FileLoader {
     private String filePathPrefix = "src/main/resources/";
 
     public List<String> getData(String fileName){

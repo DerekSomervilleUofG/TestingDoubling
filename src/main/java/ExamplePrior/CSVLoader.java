@@ -1,21 +1,19 @@
 package ExamplePrior;
 
-import ExampleStub.LoadData;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class LoadDelimitedFile {
+public class CSVLoader {
 
     private String delimitor = ",";
-    private LoadDataFromFile loadDataFile = new LoadDataFromFile();
+    private FileLoader fileLoader = new FileLoader();
 
-    LoadDelimitedFile(){
+    CSVLoader(){
         System.out.println("First constructor");
     }
 
-    public void setLoadData(LoadDataFromFile loadData){
-        this.loadDataFile = loadData;
+    public void setLoadData(FileLoader loadData){
+        this.fileLoader = loadData;
     }
 
     public void setDelimitor(String delimitor){
@@ -31,7 +29,7 @@ public class LoadDelimitedFile {
     }
 
     public List<String[]> getData(String fileName){
-        List<String> rawFileData = loadDataFile.getData(fileName);
+        List<String> rawFileData = fileLoader.getData(fileName);
         return getData(fileName,rawFileData);
     }
 

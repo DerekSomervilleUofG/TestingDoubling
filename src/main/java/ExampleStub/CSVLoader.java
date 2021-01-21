@@ -3,13 +3,23 @@ package ExampleStub;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LoadDelimitedFile {
+public class CSVLoader {
 
     private String delimitor = ",";
-    private LoadData loadDataFile = new LoadDataFile();
+    private Loader loader;
 
-    public void setLoadData(LoadData loadData){
-        this.loadDataFile = loadData;
+    CSVLoader(){
+        System.out.println("First constructor");
+        this.loader = new FileLoader();
+    }
+
+    CSVLoader(Loader loader){
+        System.out.println("Second constructor");
+        this.loader = loader;
+    }
+
+    public void setLoader(Loader loader){
+        this.loader = loader;
     }
 
     public void setDelimitor(String delimitor){
@@ -25,7 +35,7 @@ public class LoadDelimitedFile {
     }
 
     public List<String[]> getData(String fileName){
-        List<String> rawFileData = loadDataFile.getData(fileName);
+        List<String> rawFileData = loader.getData(fileName);
         return getData(fileName,rawFileData);
     }
 

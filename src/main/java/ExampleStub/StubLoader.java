@@ -3,7 +3,7 @@ package ExampleStub;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LoadDataStub implements LoadData {
+public class StubLoader implements Loader {
     @Override
     public List<String> getData(String fileName) {
         List<String> stubData= new ArrayList<String>();
