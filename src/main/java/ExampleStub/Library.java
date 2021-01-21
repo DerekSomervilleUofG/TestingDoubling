@@ -13,7 +13,7 @@ public class Library {
         String[] header = books.remove(0);
         Book book;
         for (String[] bookDetails : books) {
-            book = new Book(bookDetails[0],bookDetails[1], Integer.parseInt(bookDetails[2]));
+            book = new Book(bookDetails[0],bookDetails[1], Integer.parseInt(bookDetails[2]),Integer.parseInt(bookDetails[3]));
             listOfBooks.add(book);
             book.display();
         }

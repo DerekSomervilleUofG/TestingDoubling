@@ -19,6 +19,22 @@ public class Book {
         this.numberOfPages = numberOfPages;
     }
 
+    public String getAuthor(){
+        return author;
+    }
+
+    public String getTitle(){
+        return title;
+    }
+
+    public int getReleaseYear(){
+        return releaseYear;
+    }
+
+    public int getNumberOfPages(){
+        return numberOfPages;
+    }
+
     protected String bookInformation(){
         String info = authorPrefix + " " + this.author;
         info += " " + titlePrefix + " " + this.title;
