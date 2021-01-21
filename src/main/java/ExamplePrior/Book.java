@@ -16,6 +16,18 @@ public class Book {
         this.releaseYear = releaseYear;
     }
 
+    public String getAuthor(){
+        return author;
+    }
+
+    public String getTitle(){
+        return title;
+    }
+
+    public int getReleaseYear(){
+        return releaseYear;
+    }
+
     private String bookInformation(){
         String info = authorPrefix + " " + author;
         info += " " + titlePrefix + " " + title;
